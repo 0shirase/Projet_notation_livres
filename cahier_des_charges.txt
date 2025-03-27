@@ -1,0 +1,67 @@
+   1.Présentation du Projet
+
+-Nom du projet: Création d'un site de notation de livres.
+-Public cible: Débutants, intermédiaires, avancés.
+
+   
+   
+    2.Périmètre du projet
+
+-fonctionnalités principales:
+   -Page d'accueil avec menu nav 
+   -Ajout des différentes sections du sites (catégories,derniers livres ajoutés etc...)
+   -Formulaire de contact simple
+
+-Contraintes techniques : 
+   -Utilisation  d'HTML,CSS,JavaScript
+   -responsive design
+   -ajout/trouver une API pour les livres
+   -Moyen de connexion 
+
+  
+  
+   3.Spécifications Fonctionnelles
+   
+   -Nav: Menu dynamique en haut (changeant après connexion) avec un menu  déroulant affichant son profile, ses notes, ses favoris et ses to-read
+   -Menu principal affichant les derniers livres les mieux notés
+   -Menu "livres" avec tous les livres (sur plusieurs pages) avec possibilité de trier par : 
+                                                                                            -Date d'ajout
+                                                                                            -Notations globales
+                                                                                            -catégories
+                                                                                            -Popularité
+   -Formulaire de contact:
+                          -A propos du site
+                          -contact
+                          -A définir
+
+    
+   4.Spécifications Techniques
+
+-Languages et outils:
+   -Html5, css3, JavaScript
+   -possibilité de framework
+
+-Structure du code:
+   -Utilisation du SASS pour séparer les fichiers
+   -respect des conventions de nommage
+
+-Hébergement et compatibilité
+  -Compatible sur Chrome,FireFox,Edge
+  -Version responsive (PC,Tablette,Mobile)
+
+
+  5. Contraintes et accessibilité
+     
+  -Performances: Code optimisé                         
+  -Sécurité: A définir
+
+
+  
+  6.Planning et livrables
+
+-Livrables:
+  -Code source sur github
+  -Documentations sur Pearltrees pour expliquer les choix techniques
+
+-Étapes clés: 
+  -A définir
