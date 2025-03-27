@@ -11,6 +11,9 @@
    -Page d'accueil avec menu nav 
    -Ajout des différentes sections du sites (catégories,derniers livres ajoutés etc...)
    -Formulaire de contact simple
+   -Page d'accueil avec fenêtre de connexion et d'inscription
+   
+
 
 -Contraintes techniques : 
    -Utilisation  d'HTML,CSS,JavaScript
@@ -23,16 +26,20 @@
    3.Spécifications Fonctionnelles
    
    -Nav: Menu dynamique en haut (changeant après connexion) avec un menu  déroulant affichant son profile, ses notes, ses favoris et ses to-read
-   -Menu principal affichant les derniers livres les mieux notés
    -Menu "livres" avec tous les livres (sur plusieurs pages) avec possibilité de trier par : 
                                                                                             -Date d'ajout
                                                                                             -Notations globales
                                                                                             -catégories
                                                                                             -Popularité
+   -Page d'accueil avec menu slidant affichant les livres du moment et populaire auprès des amis(ou les dernières reviews)                                                                                       
    -Formulaire de contact:
                           -A propos du site
                           -contact
                           -A définir
+   -Menu catégorie sur l'un des côtés du site        
+   -Logo/Nom du site cliquable pour revenir au menu "accueil"
+   -Petit button en haut à gauche permettant de changer le site en mode "jour/nuit"
+                   
 
     
    4.Spécifications Techniques
