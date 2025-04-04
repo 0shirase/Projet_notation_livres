@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jomhuria&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/1800d6449f.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Lectura</title>
   </head>
@@ -33,11 +37,24 @@
       </nav>
     </header>
     <main>
-      <div class="main-container">
-        <div class="search-bar"></div>
-        <div class="connection-menu"></div>
-        <div class="inscription-button"></div>
-      </div>
+      <section class="main-container">
+        <div class="search-bar-container fl-end">
+          <div class="search-bar">
+            <input type="text" placeholder="Barre de recherche" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <div class="connection-menu fl-column">
+          <h3>Connectez-vous !</h3>
+          <form class="login">
+            <input type="text" placeholder="Nom d'utilisateur" required />
+            <input type="password" placeholder="Mot de passe" required />
+            <div class="submit-button">
+              <button>Connexion</button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
   </body>
 </html>
