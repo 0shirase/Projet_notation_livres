@@ -1,49 +1,48 @@
 <!DOCTYPE hmtl>
 
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jomhuria&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/1800d6449f.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./assets/style.css" />
-    <title>Lectura</title>
-  </head>
-  <body>
-    <header class="pagetop">
-      <div class="site-name">
-        <a href="./index.html">
-          <h1>Lectura</h1>
-        </a>
-      </div>
-      <nav class="nav-barre">
-        <a href="./page_name/listes.html">
-          <h3>Listes</h3>
-        </a>
-        <a href="./page_name/livres.html">
-          <h3>Livres</h3>
-        </a>
-        <a href="./page_name/membres.html">
-          <h3>Membres</h3>
-        </a>
-      </nav>
-    </header>
-    <main>
-      <section class="main-container">
-        <div class="search-bar-container fl-end">
-          <div class="search-bar">
-            <input type="text" placeholder="Barre de recherche" />
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jomhuria&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/1800d6449f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <title>Lectura</title>
+</head>
+
+<body>
+  <header class="pagetop">
+    <div class="site-name">
+      <a href="./index.html">
+        <h1>Lectura</h1>
+      </a>
+    </div>
+    <nav class="nav-barre">
+      <a href="./page_name/listes.html">
+        <h3>Listes</h3>
+      </a>
+      <a href="./page_name/livres.html">
+        <h3>Livres</h3>
+      </a>
+      <a href="./page_name/membres.html">
+        <h3>Membres</h3>
+      </a>
+    </nav>
+  </header>
+  <main>
+    <section class="main-container">
+      <div class="search-bar-container">
+        <div class="search-bar">
+          <input type="text" placeholder="Barre de recherche" />
+          <i class="fa-solid fa-magnifying-glass"></i>
         </div>
+      </div>
+      <div class="content-wrapper">
         <div class="connection-menu fl-column">
           <h3>Connectez-vous !</h3>
           <form class="login">
@@ -54,7 +53,63 @@
             </div>
           </form>
         </div>
-      </section>
-    </main>
-  </body>
+        <div class="signup-menu">
+          <p class="signup-text">
+            Rejoignez notre communauté gratuitement et commencez à noter vos </br>
+            livres préférés ! L'inscription est entièrement gratuite et vous</br>
+            permet d'accéder à un monde de découvertes littéraires, d'avis et</br>
+            de recommandations. N'attendez plus pour partager vos lectures !</br>
+          </p>
+          <button class="signup-button">Inscription</button>
+        </div>
+      </div>
+      <div class="conteneur">
+        <div class="livres">
+          <h3>Livres du moment</h3>
+          <div class="livres-actuel">
+            <div class="livres-cards">
+              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                alt="Couverture du livre L'echo du grand chant">
+              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                alt="Couverture du livre L'echo du grand chant">
+              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                alt="Couverture du livre L'echo du grand chant">
+              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                alt="Couverture du livre L'echo du grand chant">
+            </div>
+          </div>
+          <h3>Populaire auprès des amis</h3>
+          <div class="livres-actuel">
+            <div class="livres-cards">
+              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                alt="Couverture du livre L'echo du grand chant">
+              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                alt="Couverture du livre L'echo du grand chant">
+              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                alt="Couverture du livre L'echo du grand chant">
+              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                alt="Couverture du livre L'echo du grand chant">
+            </div>
+          </div>
+        </div>
+        <div class="categorie">
+          <h3>Catégories</h3>
+          <ul>
+            <li>Science-fiction</li>
+            <li>Romance</li>
+            <li>Aventure</li>
+            <li>Horreur</li>
+            <li>BD</li>
+            <li>Manga</li>
+            <li>Scientifique</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <h2>footer in progress</h2>
+  </footer>
+</body>
+
 </html>

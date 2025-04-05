@@ -78,6 +78,10 @@ h3 {
 /** search-bar **/
 .search-bar-container {
   margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .search-bar {
@@ -125,6 +129,7 @@ h3 {
   background-color: #0e062a;
   width: 30%;
   height: 503px;
+  border-radius: 15px;
 }
 
 .connection-menu input {
@@ -158,4 +163,109 @@ form button {
   font-size: 1.1em;
   position: absolute;
   right: 25px;
+  top: 65px;
+}
+
+.content-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 12rem;
+}
+
+/** Inscription **/
+
+.signup-menu {
+  position: absolute;
+  bottom: 4rem;
+  right: 16rem;
+  text-align: center;
+}
+
+.signup-menu p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.signup-button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 15px;
+  border: 2px solid #0e062a;
+  background: var(--beige, #f1f0ca);
+  cursor: pointer;
+  font-size: 1.1em;
+  width: 265px;
+  height: 62px;
+}
+
+/** livres du moment **/
+
+.conteneur {
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+}
+
+.livres {
+  width: 70%;
+}
+
+.livres-actuel {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 5rem;
+}
+
+.livres h3 {
+  color: black;
+  margin-bottom: 1.2rem;
+}
+
+.livres-cards {
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.livres-cards img {
+  width: 17%;
+  height: auto;
+  border: solid 1px grey;
+  border-radius: 10px;
+}
+
+/** categorie **/
+
+.categorie {
+  width: 25%;
+  background-color: #0e062a;
+}
+
+.categorie h3 {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.categorie ul {
+  list-style-type: none;
+  color: white;
+  margin-left: 1rem;
+}
+
+.categorie ul li {
+  margin-bottom: 1rem;
+}
+
+/** footer **/
+
+footer {
+  background-color: #0e062a;
+  height: 180px;
+}
+
+footer h2 {
+  color: white;
 }
