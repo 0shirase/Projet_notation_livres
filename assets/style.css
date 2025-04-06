@@ -261,11 +261,35 @@ form button {
 
 /** footer **/
 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 footer {
   background-color: #0e062a;
   height: 180px;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
-footer h2 {
-  color: white;
+footer h3 {
+  font-size: 3em;
+  font-family: "Jomhuria", serif;
+}
+
+.footer-about {
+  display: flex;
+  gap: 36px;
+  margin-left: 10em;
+}
+
+.footer-icones {
+  display: flex;
+  gap: 22px;
+  justify-content: flex-end;
+  font-size: 1.5em;
+  margin-right: 5em;
 }
