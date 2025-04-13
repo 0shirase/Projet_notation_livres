@@ -1,0 +1,75 @@
+/* Supprime les marges et les rembourrages par défaut */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+figure,
+figcaption,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $quaternary-colors;
+}
+
+body {
+  //background-color: $secondary-color;
+  margin: 0;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.fl-flex {
+  display: flex;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-end {
+  align-items: flex-end;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.fw-wrap {
+  flex-wrap: wrap;
+}
