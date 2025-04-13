@@ -38,46 +38,6 @@ body {
   width: 100%;
 }
 
-.jc-end {
-  justify-content: flex-end;
-}
-
-.fd-column {
-  flex-direction: column;
-}
-
-.fl-flex {
-  display: flex;
-}
-
-.jc-sb {
-  justify-content: space-between;
-}
-
-.jc-center {
-  justify-content: center;
-}
-
-.jc-end {
-  justify-content: flex-end;
-}
-
-.ai-center {
-  align-items: center;
-}
-
-.ai-end {
-  align-items: flex-end;
-}
-
-.ta-center {
-  text-align: center;
-}
-
-.fw-wrap {
-  flex-wrap: wrap;
-}
-
 h1 {
   font-family: "Jomhuria", serif;
   margin: 0;
@@ -212,10 +172,6 @@ header nav {
 }
 
 /** menu de connection **/
-.connection-menu h2 {
-  margin: 45px;
-}
-
 .connection-menu {
   margin-top: 8%;
   margin-left: 7%;
@@ -224,7 +180,9 @@ header nav {
   height: 503px;
   border-radius: 15px;
 }
-
+.connection-menu h2 {
+  margin: 45px;
+}
 .connection-menu input {
   width: 90%;
   height: 45px;
@@ -262,7 +220,6 @@ form button {
   bottom: 4rem;
   right: 16rem;
 }
-
 .signup-menu p {
   margin-bottom: 1.5rem;
   font-size: 1.28rem;
@@ -289,21 +246,19 @@ form button {
   width: 70%;
   margin-left: 5%;
 }
+.livres h2 {
+  color: black;
+  margin-bottom: 1.2rem;
+}
 
 .livres-actuel {
   gap: 11px;
   margin-bottom: 5rem;
 }
 
-.livres h2 {
-  color: black;
-  margin-bottom: 1.2rem;
-}
-
 .livres-cards {
   gap: 70px;
 }
-
 .livres-cards img {
   width: 17%;
   height: auto;
@@ -319,7 +274,6 @@ form button {
 .categorie h2 {
   margin: 1rem;
 }
-
 .categorie ul {
   list-style-type: none;
   color: white;

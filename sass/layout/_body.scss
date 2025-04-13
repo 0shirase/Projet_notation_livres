@@ -48,10 +48,6 @@
 }
 
 /** menu de connection **/
-.connection-menu h2 {
-  margin: 45px;
-}
-
 .connection-menu {
   margin-top: 8%;
   margin-left: 7%;
@@ -59,14 +55,17 @@
   width: 35%;
   height: 503px;
   border-radius: 15px;
-}
+  h2 {
+    margin: 45px;
+  }
 
-.connection-menu input {
-  width: 90%;
-  height: 45px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.25rem;
+  input {
+    width: 90%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+  }
 }
 
 .login {
@@ -98,11 +97,10 @@ form button {
 .signup-menu {
   bottom: 4rem;
   right: 16rem;
-}
-
-.signup-menu p {
-  margin-bottom: 1.5rem;
-  font-size: 1.28rem;
+  p {
+    margin-bottom: 1.5rem;
+    font-size: 1.28rem;
+  }
 }
 
 .signup-button {
@@ -126,6 +124,10 @@ form button {
 .livres {
   width: 70%;
   margin-left: 5%;
+  h2 {
+    color: $tertiary-color;
+    margin-bottom: 1.2rem;
+  }
 }
 
 .livres-actuel {
@@ -133,20 +135,15 @@ form button {
   margin-bottom: 5rem;
 }
 
-.livres h2 {
-  color: $tertiary-color;
-  margin-bottom: 1.2rem;
-}
-
 .livres-cards {
   gap: 70px;
-}
 
-.livres-cards img {
-  width: 17%;
-  height: auto;
-  border: solid 1px grey;
-  border-radius: 10px;
+  img {
+    width: 17%;
+    height: auto;
+    border: solid 1px grey;
+    border-radius: 10px;
+  }
 }
 
 /** categorie **/
@@ -157,14 +154,13 @@ form button {
   h2 {
     margin: 1rem;
   }
-}
-
-.categorie ul {
-  list-style-type: none;
-  color: $quaternary-colors;
-  margin-left: 1rem;
-  li {
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
+  ul {
+    list-style-type: none;
+    color: $quaternary-colors;
+    margin-left: 1rem;
+    li {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
   }
 }
