@@ -11,127 +11,127 @@
     href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jomhuria&display=swap"
     rel="stylesheet" />
   <script src="https://kit.fontawesome.com/1800d6449f.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="stylesheet" href="./sass/main.css" />
   <title>Lectura</title>
 </head>
 
 <body>
-  <header>
-    <div class="site-name">
+  <section class="accueil-body">
+    <header>
       <a href="./index.html">
         <h1>Lectura</h1>
       </a>
-    </div>
-    <nav>
-      <a href="./page_name/listes.html">
-        <h3>Listes</h3>
-      </a>
-      <a href="./page_name/livres.html">
-        <h3>Livres</h3>
-      </a>
-      <a href="./page_name/membres.html">
-        <h3>Membres</h3>
-      </a>
-      <a href="./temp_name/profile.html">
-        Profile
-      </a>
-    </nav>
-  </header>
-  <main>
-    <section class="main-container">
-      <div class="search-bar-container">
-        <div class="search-bar">
-          <input type="text" placeholder="Barre de recherche" />
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-      </div>
-      <div class="content-wrapper">
-        <div class="connection-menu fl-column">
-          <h3>Connectez-vous !</h3>
-          <form class="login">
-            <input type="text" placeholder="Nom d'utilisateur" required />
-            <input type="password" placeholder="Mot de passe" required />
-            <div class="submit-button">
-              <button>Connexion</button>
-            </div>
-          </form>
-        </div>
-        <div class="signup-menu">
-          <p class="signup-text">
-            Rejoignez notre communauté gratuitement et commencez à noter vos </br>
-            livres préférés ! L'inscription est entièrement gratuite et vous</br>
-            permet d'accéder à un monde de découvertes littéraires, d'avis et</br>
-            de recommandations. N'attendez plus pour partager vos lectures !</br>
-          </p>
-          <button class="signup-button">Inscription</button>
-        </div>
-      </div>
-      </div>
-      <div class="conteneur">
-        <div class="livres">
-          <h3>Livres du moment</h3>
-          <div class="livres-actuel">
-            <div class="livres-cards">
-              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
-                alt="Couverture du livre L'echo du grand chant">
-              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
-                alt="Couverture du livre L'echo du grand chant">
-              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
-                alt="Couverture du livre L'echo du grand chant">
-              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
-                alt="Couverture du livre L'echo du grand chant">
-            </div>
-          </div>
-          <h3>Populaire auprès des amis</h3>
-          <div class="livres-actuel">
-            <div class="livres-cards">
-              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
-                alt="Couverture du livre L'echo du grand chant">
-              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
-                alt="Couverture du livre L'echo du grand chant">
-              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
-                alt="Couverture du livre L'echo du grand chant">
-              <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
-                alt="Couverture du livre L'echo du grand chant">
-            </div>
+      <nav>
+        <a href="./pages_name/listes.html">
+          Listes
+        </a>
+        <a href="./pages_name/livres.html">
+          Livres
+        </a>
+        <a href="./pages_name/membres.html">
+          Membres
+        </a>
+        <a href="./pages_name/profile.html">
+          Profile
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section class="main-container">
+        <div class="search-bar-container fl-flex fd-column jc-sb">
+          <div class="search-bar fl-flex ai-center jc-center">
+            <input type="text" placeholder="Barre de recherche" class="ta-center" />
+            <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
-        <div class="categorie">
-          <h3>Catégories</h3>
-          <ul>
-            <li>Science-fiction</li>
-            <li>Romance</li>
-            <li>Aventure</li>
-            <li>Horreur</li>
-            <li>BD</li>
-            <li>Manga</li>
-            <li>Scientifique</li>
-          </ul>
+        <div class="content-wrapper fl-flex">
+          <div class="connection-menu fd-column">
+            <h2>Connectez-vous !</h2>
+            <form class="login fl-flex fd-column">
+              <input type="text" placeholder="Nom d'utilisateur" required />
+              <input type="password" placeholder="Mot de passe" required />
+              <div class="submit-button fl-flex jc-end">
+                <button>Connexion</button>
+              </div>
+            </form>
+          </div>
+          <div class="signup-menu jc-end fd-column fl-flex ta-center ai-center">
+            <p class="signup-text">
+              Rejoignez notre communauté gratuitement et commencez à noter vos </br>
+              livres préférés ! L'inscription est entièrement gratuite et vous</br>
+              permet d'accéder à un monde de découvertes littéraires, d'avis et</br>
+              de recommandations. N'attendez plus pour partager vos lectures !</br>
+            </p>
+            <button class="signup-button">Inscription</button>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <section class="footer-container">
-      <div class="footer-about">
-        <h3>A propos</h3>
-        <h3>Help</h3>
-        <h3>Conditions d'utilisation</h3>
-        <h3>API</h3>
-        <h3>Contact</h3>
-      </div>
-      <div class="footer-icones">
-        <a href="https://www.youtube.com/?app=desktop&hl=FR">
-          <i class="fa-brands fa-youtube "></i>
-        </a>
-        <a href="https://www.instagram.com/">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="https://x.com/home"><i class="fa-brands fa-x-twitter"></i></a>
-      </div>
-    </section>
-  </footer>
+        </div>
+        <div class="conteneur fl-flex jc-sb">
+          <div class="livres">
+            <h2>Livres du moment</h2>
+            <div class="livres-actuel fl-flex fd-column">
+              <div class="livres-cards fl-flex fw-wrap">
+                <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                  alt="Couverture du livre L'echo du grand chant">
+                <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                  alt="Couverture du livre L'echo du grand chant">
+                <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                  alt="Couverture du livre L'echo du grand chant">
+                <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                  alt="Couverture du livre L'echo du grand chant">
+              </div>
+            </div>
+            <h2>Populaire auprès des amis</h2>
+            <div class="livres-actuel">
+              <div class="livres-cards fl-flex fw-wrap">
+                <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                  alt="Couverture du livre L'echo du grand chant">
+                <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                  alt="Couverture du livre L'echo du grand chant">
+                <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                  alt="Couverture du livre L'echo du grand chant">
+                <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
+                  alt="Couverture du livre L'echo du grand chant">
+              </div>
+            </div>
+          </div>
+          <div class="categorie">
+            <h2 class="fl-flex jc-center">Catégories</h2>
+            <ul>
+              <li>Science-fiction</li>
+              <li>Romance</li>
+              <li>Aventure</li>
+              <li>Horreur</li>
+              <li>BD</li>
+              <li>Manga</li>
+              <li>Scientifique</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="footer-container fl-flex jc-sb">
+        <div class="footer-about fl-flex">
+          <a href="#">A propos</a>
+          <a href="#">Help</a>
+          <a href="#">Conditions d'utilisation</a>
+          <a href="#">API</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-icones fl-flex jc-end">
+          <a href="https://www.youtube.com/?app=desktop&hl=FR">
+            <i class="fa-brands fa-youtube "></i>
+          </a>
+          <a href="https://www.instagram.com/">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://x.com/home"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </section>
+    </footer>
+  </section>
 </body>
 
 </html>

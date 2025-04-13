@@ -1,0 +1,21 @@
+header {
+  width: 100%;
+  height: 81px;
+  background-color: $secondary-color;
+  color: $quaternary-colors;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 6.45em;
+    margin-left: 20%;
+  }
+  nav {
+    font-size: 1.45rem;
+    display: flex;
+    gap: 15px;
+    margin-right: 2%;
+  }
+}

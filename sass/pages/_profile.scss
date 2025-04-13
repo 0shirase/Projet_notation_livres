@@ -1,0 +1,75 @@
+/** Profile **/
+
+/** main **/
+
+.profil-main-container {
+  background-color: $secondary-color;
+  width: 100%;
+  gap: 35px;
+}
+
+.profil-banner {
+  margin: 2%;
+  gap: 50px;
+
+  img {
+    width: 173px;
+    height: 173px;
+    border-radius: 60%;
+  }
+
+  .profil-description {
+    width: 100%;
+
+    h3 {
+      font-size: 2rem;
+      color: $quaternary-colors;
+    }
+    p {
+      color: $quaternary-colors;
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    span {
+      display: flex;
+      justify-content: center;
+      font-family: "Jomhuria", serif;
+      font-size: 3rem;
+    }
+  }
+
+  .profil-bio {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .profil-stats {
+    display: flex;
+    gap: 25px;
+  }
+
+  .profil-description p {
+    font-family: "Inria Sans", sans-serif;
+    font-size: 1.25rem;
+    opacity: 0.75;
+  }
+
+  .profil-description a p:hover {
+    color: blue;
+  }
+
+  .profil-nav {
+    justify-content: space-around;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+}
+
+.favorites-books {
+  margin: 2%;
+  width: 70%;
+  border: 2px red solid;
+}

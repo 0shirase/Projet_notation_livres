@@ -10,7 +10,7 @@
     href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jomhuria&display=swap"
     rel="stylesheet" />
   <script src="https://kit.fontawesome.com/1800d6449f.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../assets/profile.css">
+  <link rel="stylesheet" href="../sass/main.css">
   <title>Lectura</title>
 
 <body>
@@ -21,13 +21,13 @@
       </a>
     </div>
     <nav>
-      <a href="./page_name/listes.html">
+      <a href="./pages_name/listes.html">
         <h3>Listes</h3>
       </a>
-      <a href="./page_name/livres.html">
+      <a href="./pages_name/livres.html">
         <h3>Livres</h3>
       </a>
-      <a href="./page_name/membres.html">
+      <a href="./pages_name/membres.html">
         <h3>Membres</h3>
       </a>
       <a href="./temp_name/profile.html">
@@ -36,17 +36,25 @@
     </nav>
   </header>
   <main>
-    <section class="main-container">
-      <section class="profil-banner">
+    <section class="profil-main-container fl-flex fd-column">
+      <section class="profil-banner fl-flex">
         <div class="profil-picture">
-          <img src="../assets/images/9acedeea2b880945b95684cd8f9bfa9e.jpg" alt="">
+          <img src="../assets/images/singe.png" alt="">
         </div>
-        <div class="profil-description">
-          <div>
-            <h3>Oshirase</h3>
-            <p>J'accepterais aucune critique de mes livres mais enjoy</p>
+        <div class="profil-description fl-flex jc-sb">
+          <div class="fl-flex fd-column" style="gap: 70px; width: 100%;">
+            <div class="profil-bio fl-flex fd-column">
+              <h3>Oshirase</h3>
+              <p>J'accepterais aucune critique de mes livres mais enjoy</p>
+            </div>
+            <div class="profil-nav fl-flex ">
+              <a href="#">Mes notes</a>
+              <a href="#">Contacts</a>
+              <a href="#">Mes listes</a>
+              <a href="#">To-read</a>
+            </div>
           </div>
-          <div>
+          <div class="profil-stats">
             <a href="#">
               <span>310</span>
               <p>Livres</p>
@@ -62,6 +70,9 @@
           </div>
         </div>
       </section>
+      <div class="favorites-books">
+        <h2>Livres favoris</h2>
+      </div>
     </section>
   </main>
 </body>
