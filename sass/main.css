@@ -1,6 +1,7 @@
 @charset "UTF-8";
-/*beige*/
+/*gradient blue*/
 /*blue*/
+/* beige */
 /*black */
 /*white*/
 /* Supprime les marges et les rembourrages par défaut */
@@ -77,6 +78,10 @@ h3 {
   justify-content: space-between;
 }
 
+.jc-sa {
+  justify-content: space-around;
+}
+
 .jc-center {
   justify-content: center;
 }
@@ -99,6 +104,175 @@ h3 {
 
 .fw-wrap {
   flex-wrap: wrap;
+}
+
+/* modal animation */
+@keyframes modalFadeZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.modal-wrapper {
+  animation: modalFadeZoom 0.3s ease forwards;
+}
+
+.modal-wrapper {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+
+.modal[aria-hidden=false] .modal-wrapper {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.submit-button {
+  margin-right: 10%;
+}
+.submit-button label {
+  color: white;
+  gap: 10px;
+}
+.submit-button label input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+
+form button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1.35em;
+}
+
+.signup-button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 15px;
+  border: 2px solid #0e062a;
+  background: #0e062a;
+  color: white;
+  cursor: pointer;
+  font-size: 1.35em;
+  width: 230px;
+  height: 45px;
+}
+
+.signup-form button[type=submit],
+#close-modal {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #42376a;
+}
+
+.add-photo-button {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  background-color: #0e062a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+
+.add-photo-button::before {
+  content: "+";
+  position: absolute;
+  left: 73px;
+  bottom: 0px;
+  font-size: 30px;
+  color: #544783;
+  background-color: white;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-photo-button:hover {
+  background-color: #155a44;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  visibility: hidden;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.modal[aria-hidden=false] {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.modal-wrapper {
+  background-color: rgba(84, 71, 131, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.modal[aria-hidden=false] .modal-wrapper {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.signup-form {
+  gap: 25px;
+}
+.signup-form input {
+  display: block;
+  margin-bottom: 10px;
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e2d0bd;
+}
+
+.image-preview-container .image-preview {
+  width: 110px;
+  height: 110px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 header {
@@ -129,7 +303,7 @@ header nav {
 }
 
 .accueil-body {
-  background-color: #f1f0ca;
+  background: linear-gradient(to bottom, #0e062a, #42376a);
 }
 
 /** search-bar **/
@@ -174,9 +348,11 @@ header nav {
 /** menu de connection **/
 .connection-menu {
   margin-top: 8%;
-  margin-left: 7%;
-  background-color: #0e062a;
-  width: 35%;
+  margin-left: 3%;
+  background-color: rgba(66, 55, 106, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 45%;
   height: 503px;
   border-radius: 15px;
 }
@@ -189,6 +365,13 @@ header nav {
   border: none;
   border-radius: 5px;
   font-size: 1.25rem;
+  background-color: #e2d0bd;
+}
+.connection-menu ::-moz-placeholder {
+  padding-left: 10px;
+}
+.connection-menu ::placeholder {
+  padding-left: 10px;
 }
 
 .login {
@@ -196,58 +379,50 @@ header nav {
   margin-left: 10%;
 }
 
-.submit-button {
-  margin-right: 10%;
-}
-
-form button {
-  background-color: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 1.35em;
-}
-
 .content-wrapper {
   margin-bottom: 12rem;
-  gap: 180px;
+  position: relative;
+  width: 100%;
+}
+
+.content-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -12%;
+  left: -28px;
+  width: 830px;
+  background-image: url("../../assets/images/ee7438eefd5513d577360c31268e804282912507.png");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 832px;
 }
 
 /** Inscription **/
+.signup {
+  background-color: #e2d0bd;
+  padding: 43px 41px 27px 40px;
+  gap: 20px;
+  border-radius: 15px;
+}
+
 .signup-menu {
   bottom: 4rem;
   right: 16rem;
 }
 .signup-menu p {
   margin-bottom: 1.5rem;
-  font-size: 1.28rem;
-}
-
-.signup-button {
-  padding: 0.6rem 1.2rem;
-  border-radius: 15px;
-  border: 2px solid #0e062a;
-  background: #f1f0ca;
-  cursor: pointer;
-  font-size: 1.65em;
-  width: 265px;
-  height: 62px;
+  font-size: 1.32rem;
+  text-align: left;
 }
 
 /** livres du moment **/
-.conteneur {
-  margin: 2%;
-  width: 100%;
-}
-
 .livres {
   width: 70%;
   margin-left: 5%;
 }
 .livres h2 {
-  color: black;
+  color: #e2d0bd;
   margin-bottom: 1.2rem;
 }
 
@@ -270,6 +445,7 @@ form button {
 .categorie {
   width: 25%;
   background-color: #0e062a;
+  margin-right: 2%;
 }
 .categorie h2 {
   margin: 1rem;

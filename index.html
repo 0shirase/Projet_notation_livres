@@ -12,6 +12,7 @@
     rel="stylesheet" />
   <script src="https://kit.fontawesome.com/1800d6449f.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./sass/main.css" />
+  <script src="script.js" defer></script>
   <title>Lectura</title>
 </head>
 
@@ -44,29 +45,45 @@
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
-        <div class="content-wrapper fl-flex">
+        <div class="content-wrapper fl-flex jc-sa">
           <div class="connection-menu fd-column">
-            <h2>Connectez-vous !</h2>
+            <h2>Connexion</h2>
             <form class="login fl-flex fd-column">
               <input type="text" placeholder="Nom d'utilisateur" required />
               <input type="password" placeholder="Mot de passe" required />
-              <div class="submit-button fl-flex jc-end">
+              <div class="submit-button fl-flex jc-sb ai-center">
+                <label for="stay-logged-in" class="fl-flex ai-center">
+                  <input type="checkbox" id="stay-logged-in" name="stay-logged-in"> Rester connecté
+                </label>
                 <button>Connexion</button>
               </div>
             </form>
           </div>
           <div class="signup-menu jc-end fd-column fl-flex ta-center ai-center">
-            <p class="signup-text">
-              Rejoignez notre communauté gratuitement et commencez à noter vos </br>
-              livres préférés ! L'inscription est entièrement gratuite et vous</br>
-              permet d'accéder à un monde de découvertes littéraires, d'avis et</br>
-              de recommandations. N'attendez plus pour partager vos lectures !</br>
-            </p>
-            <button class="signup-button">Inscription</button>
+            <div class="signup fl-flex fd-column">
+              <p>Partagez vos lectures, gérez votre calendrier de lecture <br>
+                et tout ça gratuitement et sans engagement !
+              </p>
+              <button class="signup-button fl-flex jc-center ai-center" id="signup-button">Inscription</button>
+            </div>
           </div>
         </div>
         </div>
-        <div class="conteneur fl-flex jc-sb">
+        <!--modal-->
+        <aside id="signup-modal" class="modal" aria-hidden="true">
+          <div class="modal-wrapper">
+            <h2>Inscription</h2>
+            <form class="signup-form fl-flex fd-column ai-center">
+              <input type="text" placeholder="Nom d'utilisateur" required>
+              <input type="email" placeholder="Adresse email" required>
+              <input type="password" placeholder="Mot de passe" required>
+              <input type="password" placeholder="confirmer le mot de passe" required>
+              <button type="submit">S'inscrire</button>
+            </form>
+            <button id="close-modal">Fermer</button>
+          </div>
+        </aside>
+        <div class="fl-flex">
           <div class="livres">
             <h2>Livres du moment</h2>
             <div class="livres-actuel fl-flex fd-column">
