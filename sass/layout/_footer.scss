@@ -9,14 +9,22 @@ footer {
   height: 180px;
   display: flex;
   align-items: center;
+  border-top: solid 2px $tertiary-color;
+  width: 95%;
+}
+
+.footer-about div {
+  gap: 3rem;
 }
 
 .footer-about {
-  gap: 36px;
   margin-left: 10em;
   a {
     font-size: 3em;
     font-family: "Jomhuria", serif;
+  }
+  p {
+    color: $secondary-night-colors;
   }
 }
 

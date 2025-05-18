@@ -81,17 +81,28 @@ fileInput.addEventListener("change", function () {
 
 function resetModal() {
   const titleAndCloseDiv = modalWrapper.querySelector("h2");
-  const worksDiv = modalWrapper.querySelector("form");
-  const lineDivider = modalWrapper.querySelector("hr");
+  const formElement = modalWrapper.querySelector("form");
 
   if (titleAndCloseDiv) titleAndCloseDiv.style.display = "block";
-  if (worksDiv) worksDiv.style.display = "block";
-  if (lineDivider) lineDivider.style.display = "block";
 
+  const inputs = formElement.querySelectorAll("input, textarea, select");
+  inputs.forEach((input) => {
+    if (input.type === "checkbox" || input.type === "radio") {
+      input.checked = false;
+    } else {
+      input.value = "";
+    }
+  });
   const photoForm = modalWrapper.querySelector(".photo-upload-form");
   if (photoForm) photoForm.remove();
 
   imagePreviewContainer.innerHTML = "";
   addPhotoButton.style.display = "block";
+  addPhotoButton.textContent = "Ajouter une photo";
+
+  fileInput.value = "";
+
+  addPhotoButton.classList.remove("image-chosen");
+
   inAddPhotoSection = false;
 }

@@ -12,14 +12,15 @@
     rel="stylesheet" />
   <script src="https://kit.fontawesome.com/1800d6449f.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./sass/main.css" />
-  <script src="script.js" defer></script>
+  <script src="./scripts/index.js" defer></script>
+  <script src="./scripts/signupModal.js" defer></script>
   <title>Lectura</title>
 </head>
 
 <body>
-  <section class="accueil-body">
+  <section class="accueil-body fl-flex fd-column ai-center">
     <header>
-      <a href="./index.html">
+      <a href="./index.html" class="fl-flex jc-center">
         <h1>Lectura</h1>
       </a>
       <nav>
@@ -45,7 +46,7 @@
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
-        <div class="content-wrapper fl-flex jc-sa">
+        <section class="content-wrapper fl-flex jc-sa">
           <div class="connection-menu fd-column">
             <h2>Connexion</h2>
             <form class="login fl-flex fd-column">
@@ -70,7 +71,7 @@
               <button class="signup-button fl-flex jc-center ai-center" id="signup-button">Inscription</button>
             </div>
           </div>
-        </div>
+        </section>
         </div>
         <!--modal-->
         <aside id="signup-modal" class="modal" aria-hidden="true">
@@ -86,11 +87,15 @@
             <button id="close-modal">Fermer</button>
           </div>
         </aside>
-        <div class="fl-flex">
-          <div class="livres">
-            <h2>Livres du moment</h2>
-            <div class="livres-actuel fl-flex fd-column">
-              <div class="livres-cards fl-flex fw-wrap">
+        <section class="divider-gradient"> </section>
+        <section class="fl-flex index-books">
+          <div class="books">
+            <div class="books-title fl-flex jc-sb">
+              <h2>Livres du moment</h2>
+              <a href="#" class="fl-flex ai-end">tout voir</a>
+            </div>
+            <div class="current-books fl-flex fd-column">
+              <div class="books-cards fl-flex fw-wrap">
                 <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
                   alt="Couverture du livre L'echo du grand chant">
                 <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
@@ -101,9 +106,12 @@
                   alt="Couverture du livre L'echo du grand chant">
               </div>
             </div>
-            <h2>Populaire auprès des amis</h2>
-            <div class="livres-actuel">
-              <div class="livres-cards fl-flex fw-wrap">
+            <div class="books-title fl-flex jc-sb">
+              <h2>Dernières notes</h2>
+              <a href="#" class="fl-flex ai-end">tout voir</a>
+            </div>
+            <div class="books-actuel">
+              <div class="books-cards fl-flex fw-wrap">
                 <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
                   alt="Couverture du livre L'echo du grand chant">
                 <img src="/assets/images/71HB31Kun1L._AC_UF1000,1000_QL80_.jpg"
@@ -116,29 +124,41 @@
             </div>
           </div>
           <div class="categorie">
-            <h2 class="fl-flex jc-center">Catégories</h2>
+            <h2>Catégories</h2>
             <ul>
-              <li>Science-fiction</li>
-              <li>Romance</li>
+              <li>Action</li>
               <li>Aventure</li>
+              <li>Comédie</li>
+              <li>Crime</li>
+              <li>Drame</li>
+              <li>Dystopie</li>
+              <li>Fantastique</li>
+              <li>Fantasy</li>
+              <li>Heroic Fantasy</li>
+              <li>Historique</li>
               <li>Horreur</li>
-              <li>BD</li>
-              <li>Manga</li>
-              <li>Scientifique</li>
+              <li>Mystère</li>
+              <li>Romance</li>
+              <li>Science-Fiction</li>
+              <li>Slice of life</li>
+              <li>Thriller</li>
             </ul>
           </div>
-        </div>
-      </section>
+          </div>
+        </section>
     </main>
     <footer>
       <section class="footer-container fl-flex jc-sb">
-        <div class="footer-about fl-flex">
-          <a href="#">A propos</a>
-          <a href="#">Help</a>
-          <a href="#">Conditions d'utilisation</a>
-          <a href="#">API</a>
-          <a href="#">Contact</a>
-        </div>
+        <section class="footer-about fl-flex fd-column">
+          <div class="fl-flex fd-row">
+            <a href="#">A propos</a>
+            <a href="#">Help</a>
+            <a href="#">Conditions d'utilisation</a>
+            <a href="#">API</a>
+            <a href="#">Contact</a>
+          </div>
+          <p>@ Lectura Limited. Site fait par Oshirase en France.</p>
+        </section>
         <div class="footer-icones fl-flex jc-end">
           <a href="https://www.youtube.com/?app=desktop&hl=FR">
             <i class="fa-brands fa-youtube "></i>
