@@ -2,18 +2,14 @@
 
 /** main **/
 
-.main-container {
-  margin: 2%;
-}
-
 .accueil-body {
-  background: linear-gradient(to bottom, #0e062a, #42376a);
+  background: #0e062a;
 }
 
 /** search-bar **/
 .search-bar-container {
-  margin-right: 5%;
   align-items: flex-end;
+  background-color: #0e062a;
 }
 
 .search-bar {
@@ -81,22 +77,28 @@
 }
 
 .content-wrapper {
-  margin-bottom: 12rem;
   position: relative;
   width: 100%;
+  background: linear-gradient(
+    #0e062a 0%,
+    #211842 27%,
+    #312757 50%,
+    #42366c 74%,
+    #544783 100%
+  );
 }
 
 .content-wrapper::before {
   content: "";
   position: absolute;
-  top: -12%;
-  left: -28px;
+  top: -7%;
+  left: 0px;
   width: 830px;
   background-image: url("../../assets/images/ee7438eefd5513d577360c31268e804282912507.png");
   background-size: cover;
   background-position: left center;
   background-repeat: no-repeat;
-  height: 832px;
+  height: 727px;
 }
 
 /** Inscription **/
@@ -118,23 +120,47 @@
   }
 }
 
-/** livres du moment **/
+/** Linear gradient **/
 
-.livres {
-  width: 70%;
-  margin-left: 5%;
-  h2 {
-    color: $tertiary-color;
-    margin-bottom: 1.2rem;
-  }
+.divider-gradient {
+  height: 200px;
+  background: linear-gradient(
+    to bottom,
+    #544783,
+    #42366c,
+    #312757,
+    #211842,
+    #0e062a
+  );
+  width: 100%;
+  margin: 0;
 }
 
-.livres-actuel {
+/** livres du moment **/
+
+.index-books {
+  background-color: #0e062a;
+  margin-bottom: 5%;
+}
+
+.books {
+  width: 70%;
+  margin-left: 5%;
+}
+
+.books-title {
+  color: $secondary-night-colors;
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid $tertiary-color;
+  width: 89%;
+}
+
+.current-books {
   gap: 11px;
   margin-bottom: 5rem;
 }
 
-.livres-cards {
+.books-cards {
   gap: 70px;
 
   img {
@@ -152,13 +178,12 @@
   background-color: $secondary-color;
   margin-right: 2%;
   h2 {
-    margin: 1rem;
+    border-bottom: 2px solid $tertiary-color;
+    margin-bottom: 5%;
   }
   ul {
-    list-style-type: none;
     color: $secondary-night-colors;
-
-    margin-left: 1rem;
+    margin-left: 1.45rem;
     li {
       margin-bottom: 1rem;
       font-size: 1.25rem;

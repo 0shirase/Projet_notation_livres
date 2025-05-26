@@ -9,9 +9,12 @@ header {
   align-items: center;
   justify-content: space-between;
 
+  a h1 {
+    width: 18%;
+  }
+
   h1 {
-    font-size: 6.45em;
-    margin-left: 20%;
+    font-size: 3.45em;
   }
   nav {
     font-size: 1.45rem;

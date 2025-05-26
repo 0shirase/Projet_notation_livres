@@ -40,14 +40,14 @@ body {
 }
 
 h1 {
-  font-family: "Jomhuria", serif;
+  font-family: "Inria Sans", sans-serif;
   margin: 0;
 }
 
 h2 {
   font-size: 2rem;
   color: white;
-  font-family: "Inria Sans", sans-serif;
+  font-family: "jomhuria", serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -68,6 +68,10 @@ h3 {
 
 .fd-column {
   flex-direction: column;
+}
+
+.fd-row {
+  flex-direction: row;
 }
 
 .fl-flex {
@@ -285,9 +289,11 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+header a h1 {
+  width: 18%;
+}
 header h1 {
-  font-size: 6.45em;
-  margin-left: 20%;
+  font-size: 3.45em;
 }
 header nav {
   font-size: 1.45rem;
@@ -298,18 +304,14 @@ header nav {
 
 /** accueil **/
 /** main **/
-.main-container {
-  margin: 2%;
-}
-
 .accueil-body {
-  background: linear-gradient(to bottom, #0e062a, #42376a);
+  background: #0e062a;
 }
 
 /** search-bar **/
 .search-bar-container {
-  margin-right: 5%;
   align-items: flex-end;
+  background-color: #0e062a;
 }
 
 .search-bar {
@@ -380,22 +382,22 @@ header nav {
 }
 
 .content-wrapper {
-  margin-bottom: 12rem;
   position: relative;
   width: 100%;
+  background: linear-gradient(#0e062a 0%, #211842 27%, #312757 50%, #42366c 74%, #544783 100%);
 }
 
 .content-wrapper::before {
   content: "";
   position: absolute;
-  top: -12%;
-  left: -28px;
+  top: -7%;
+  left: 0px;
   width: 830px;
   background-image: url("../../assets/images/ee7438eefd5513d577360c31268e804282912507.png");
   background-size: cover;
   background-position: left center;
   background-repeat: no-repeat;
-  height: 832px;
+  height: 727px;
 }
 
 /** Inscription **/
@@ -416,25 +418,41 @@ header nav {
   text-align: left;
 }
 
+/** Linear gradient **/
+.divider-gradient {
+  height: 200px;
+  background: linear-gradient(to bottom, #544783, #42366c, #312757, #211842, #0e062a);
+  width: 100%;
+  margin: 0;
+}
+
 /** livres du moment **/
-.livres {
+.index-books {
+  background-color: #0e062a;
+  margin-bottom: 5%;
+}
+
+.books {
   width: 70%;
   margin-left: 5%;
 }
-.livres h2 {
-  color: #e2d0bd;
+
+.books-title {
+  color: white;
   margin-bottom: 1.2rem;
+  border-bottom: 2px solid #e2d0bd;
+  width: 89%;
 }
 
-.livres-actuel {
+.current-books {
   gap: 11px;
   margin-bottom: 5rem;
 }
 
-.livres-cards {
+.books-cards {
   gap: 70px;
 }
-.livres-cards img {
+.books-cards img {
   width: 17%;
   height: auto;
   border: solid 1px grey;
@@ -448,12 +466,12 @@ header nav {
   margin-right: 2%;
 }
 .categorie h2 {
-  margin: 1rem;
+  border-bottom: 2px solid #e2d0bd;
+  margin-bottom: 5%;
 }
 .categorie ul {
-  list-style-type: none;
   color: white;
-  margin-left: 1rem;
+  margin-left: 1.45rem;
 }
 .categorie ul li {
   margin-bottom: 1rem;
@@ -470,15 +488,23 @@ footer {
   height: 180px;
   display: flex;
   align-items: center;
+  border-top: solid 2px #e2d0bd;
+  width: 95%;
+}
+
+.footer-about div {
+  gap: 3rem;
 }
 
 .footer-about {
-  gap: 36px;
   margin-left: 10em;
 }
 .footer-about a {
   font-size: 3em;
   font-family: "Jomhuria", serif;
+}
+.footer-about p {
+  color: white;
 }
 
 .footer-icones {
