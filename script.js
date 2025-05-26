@@ -27,12 +27,12 @@ closeModalButton.addEventListener("click", function () {
   closeModal();
 });
 
-signupModal.addEventListener("click", (e) => {
+/* signupModal.addEventListener("click", (e) => {
   if (e.target === signupModal && !inAddPhotoSection) {
     closeModal();
   }
 });
-
+ */
 const addPhotoButton = document.createElement("button");
 addPhotoButton.classList.add("add-photo-button");
 
@@ -82,11 +82,9 @@ fileInput.addEventListener("change", function () {
 function resetModal() {
   const titleAndCloseDiv = modalWrapper.querySelector("h2");
   const worksDiv = modalWrapper.querySelector("form");
-  const lineDivider = modalWrapper.querySelector("hr");
 
   if (titleAndCloseDiv) titleAndCloseDiv.style.display = "block";
   if (worksDiv) worksDiv.style.display = "block";
-  if (lineDivider) lineDivider.style.display = "block";
 
   const photoForm = modalWrapper.querySelector(".photo-upload-form");
   if (photoForm) photoForm.remove();
