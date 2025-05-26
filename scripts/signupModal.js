@@ -27,12 +27,12 @@ closeModalButton.addEventListener("click", function () {
   closeModal();
 });
 
-/* signupModal.addEventListener("click", (e) => {
+signupModal.addEventListener("click", (e) => {
   if (e.target === signupModal && !inAddPhotoSection) {
     closeModal();
   }
 });
- */
+
 const addPhotoButton = document.createElement("button");
 addPhotoButton.classList.add("add-photo-button");
 
@@ -81,16 +81,13 @@ fileInput.addEventListener("change", function () {
 
 function resetModal() {
   const titleAndCloseDiv = modalWrapper.querySelector("h2");
-<<<<<<<< HEAD:script.js
   const worksDiv = modalWrapper.querySelector("form");
-
-  if (titleAndCloseDiv) titleAndCloseDiv.style.display = "block";
-  if (worksDiv) worksDiv.style.display = "block";
-========
+  const lineDivider = modalWrapper.querySelector("hr");
   const formElement = modalWrapper.querySelector("form");
 
   if (titleAndCloseDiv) titleAndCloseDiv.style.display = "block";
->>>>>>>> c438f21946cddfb01138f030cc802d6d5c7420c2:scripts/signupModal.js
+  if (worksDiv) worksDiv.style.display = "block";
+  if (lineDivider) lineDivider.style.display = "block";
 
   const inputs = formElement.querySelectorAll("input, textarea, select");
   inputs.forEach((input) => {
