@@ -12,9 +12,8 @@
     rel="stylesheet" />
   <script src="https://kit.fontawesome.com/1800d6449f.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./sass/main.css" />
-  <script src="./scripts/index.js" defer></script>
-  <script src="./scripts/signupModal.js" defer></script>
-  <script src="./scripts/api.js" defer></script>
+  <script type="module" src="./scripts/script.js" defer></script>
+
   <title>Lectura</title>
 </head>
 
@@ -75,17 +74,26 @@
         </section>
         </div>
         <!--modal-->
-        <aside id="signup-modal" class="modal" aria-hidden="true">
-          <div class="modal-wrapper">
-            <h2>Inscription</h2>
+        <aside id="signup-modal" class="modal hidden">
+          <div class="modal-wrapper" id="modal-wrapper">
+            <div id="picture-container">
+              <input type="file" id="profile-picture" accept="image/*" hidden />
+              <label for="profile-picture" class="profile-picture-label">
+                <img id="profile-preview" src="" alt="Aperçu photo" class="hidden" />
+                <span id="add-photo-text">Ajouter une photo</span>
+              </label>
+            </div>
             <form class="signup-form fl-flex fd-column ai-center">
-              <input type="text" placeholder="Nom d'utilisateur" required>
-              <input type="email" placeholder="Adresse email" required>
-              <input type="password" placeholder="Mot de passe" required>
-              <input type="password" placeholder="confirmer le mot de passe" required>
-              <button type="submit">S'inscrire</button>
+              <input type="text" placeholder="Nom d'utilisateur" required />
+              <input type="email" placeholder="Adresse email" required />
+              <input type="password" placeholder="Mot de passe" required />
+              <input type="password" placeholder="Confirmer le mot de passe" required />
+              <label for="accept-terms-and-conditions" class="fl-flex ai-center">
+                <input type="checkbox" id="terms-conditions-checkbox" name="accept-terms-and-conditions"> J'accepte les
+                termes et conditions
+              </label>
+              <button type="submit" id="submit-modal-button">Inscription</button>
             </form>
-            <button id="close-modal">Fermer</button>
           </div>
         </aside>
         <section class="divider-gradient"> </section>

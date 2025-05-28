@@ -1,95 +1,37 @@
-const signupButton = document.getElementById("signup-button");
-const signupModal = document.getElementById("signup-modal");
-const closeModalButton = document.getElementById("close-modal");
-const modalWrapper = signupModal.querySelector(".modal-wrapper");
+import { openModal, setupModalListeners } from "./signupModal.js";
 
-let inAddPhotoSection = false;
+document.addEventListener("DOMContentLoaded", () => {
+  const openSignupBtn = document.getElementById("signup-button");
 
-function openModal() {
-  signupModal.style.display = "flex";
-  signupModal.setAttribute("aria-hidden", "false");
-  inAddPhotoSection = false;
-}
-
-function closeModal() {
-  signupModal.style.display = "none";
-  signupModal.setAttribute("aria-hidden", "true");
-  inAddPhotoSection = false;
-  resetModal();
-}
-
-signupButton.addEventListener("click", openModal);
-
-closeModalButton.addEventListener("click", function () {
-  if (inAddPhotoSection) {
-    return;
+  if (openSignupBtn) {
+    openSignupBtn.addEventListener("click", openModal);
   }
-  closeModal();
-});
 
-/* signupModal.addEventListener("click", (e) => {
-  if (e.target === signupModal && !inAddPhotoSection) {
-    closeModal();
-  }
-});
- */
-const addPhotoButton = document.createElement("button");
-addPhotoButton.classList.add("add-photo-button");
+  setupModalListeners();
 
-const form = signupModal.querySelector("form");
-form.prepend(addPhotoButton);
+  const profileInput = document.getElementById("profile-picture");
+  const preview = document.getElementById("profile-preview");
+  const form = document.querySelector(".signup-form");
 
-addPhotoButton.textContent = "Ajouter une photo";
+  if (profileInput && preview && form) {
+    profileInput.addEventListener("change", (e) => {
+      const file = e.target.files[0];
 
-const fileInput = document.createElement("input");
-fileInput.type = "file";
-fileInput.name = "photo";
-fileInput.accept = "image/*";
-fileInput.style.display = "none";
-form.appendChild(fileInput);
+      if (file && file.type.startsWith("image/")) {
+        const reader = new FileReader();
 
-const imagePreviewContainer = document.createElement("div");
-imagePreviewContainer.classList.add("image-preview-container");
+        reader.onload = function (event) {
+          preview.src = event.target.result;
+          preview.classList.remove("hidden");
+          form.classList.add("has-image");
+        };
 
-form.prepend(imagePreviewContainer);
-
-addPhotoButton.addEventListener("click", function () {
-  fileInput.click();
-});
-
-fileInput.addEventListener("change", function () {
-  const file = fileInput.files[0];
-  if (file) {
-    const imageUrl = URL.createObjectURL(file);
-
-    imagePreviewContainer.innerHTML = "";
-
-    const imagePreview = document.createElement("img");
-    imagePreview.src = imageUrl;
-    imagePreview.alt = "Aperçu de la photo";
-    imagePreview.classList.add("image-preview");
-
-    imagePreviewContainer.appendChild(imagePreview);
-
-    addPhotoButton.style.display = "none";
-
-    imagePreviewContainer.addEventListener("click", function () {
-      fileInput.click();
+        reader.readAsDataURL(file);
+      } else {
+        preview.src = "";
+        preview.classList.add("hidden");
+        form.classList.remove("has-image");
+      }
     });
   }
 });
-
-function resetModal() {
-  const titleAndCloseDiv = modalWrapper.querySelector("h2");
-  const worksDiv = modalWrapper.querySelector("form");
-
-  if (titleAndCloseDiv) titleAndCloseDiv.style.display = "block";
-  if (worksDiv) worksDiv.style.display = "block";
-
-  const photoForm = modalWrapper.querySelector(".photo-upload-form");
-  if (photoForm) photoForm.remove();
-
-  imagePreviewContainer.innerHTML = "";
-  addPhotoButton.style.display = "block";
-  inAddPhotoSection = false;
-}

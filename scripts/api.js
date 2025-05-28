@@ -1,7 +1,7 @@
-async function getEvents() {
+export async function getEvents() {
   try {
     const apiKey = "AIzaSyDmy7b4nVHyzHCaQ8fbGGtt_uuLe0IIEWg";
-    const query = "Cherche et Trouve des tout petits géant";
+    const query = "Harry Potter";
     const response = await fetch(
       `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(
         query
