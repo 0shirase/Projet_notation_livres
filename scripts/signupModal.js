@@ -7,6 +7,20 @@ export function openModal() {
 }
 
 export function closeModal() {
+  const form = document.querySelector(".signup-form");
+  const preview = document.getElementById("profile-preview");
+
+  if (form) {
+    form.reset();
+
+    if (preview) {
+      preview.src = "";
+      preview.classList.add("hidden");
+    }
+
+    form.classList.remove("has-image");
+  }
+
   modal.classList.remove("active");
   modal.classList.add("hidden");
 }
